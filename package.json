@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "OWM_APIKEY='<OPEN_WEATHER_KEY>' node ./bin/www",
+    "start": "node ./bin/www",
     "dev": "OWM_APIKEY='<OPEN_WEATHER_KEY>' nodemon ./bin/www",
     "test": "mocha"
   },
