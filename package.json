@@ -1,0 +1,21 @@
+{
+  "name": "foreweather-backend",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "OWM_APIKEY='<OPEN_WEATHER_KEY>' node ./bin/www",
+    "dev": "OWM_APIKEY='<OPEN_WEATHER_KEY>' nodemon ./bin/www",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "async": "^2.1.5",
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "express": "~4.14.1",
+    "morgan": "~1.7.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
