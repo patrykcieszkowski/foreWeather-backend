@@ -1,10 +1,12 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express')
+var router = express.Router()
+var apicache = require('apicache')
+var cacheMw = apicache.middleware
 
 var weatherLib = require('../lib/weather.js')
 var Weather = new weatherLib({ unit: 1 })
 
-router.get('/weather', function(req, res)
+router.get('/weather', cacheMw('1 hour'), function(req, res)
 {
   if (!req.query.location)
   {
@@ -17,7 +19,7 @@ router.get('/weather', function(req, res)
   })
 })
 
-router.get('/forecast', function(req, res)
+router.get('/forecast', cacheMw('3 hours'), function(req, res)
 {
   if (!req.query.location)
   {

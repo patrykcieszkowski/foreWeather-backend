@@ -8,6 +8,7 @@
     "test": "mocha"
   },
   "dependencies": {
+    "apicache": "^0.8.3",
     "async": "^2.1.5",
     "body-parser": "~1.16.0",
     "cookie-parser": "~1.4.3",
